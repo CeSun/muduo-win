@@ -8,8 +8,8 @@
 #define CALM_NET_TIMERQUEUE_H_
 
 #include "TimeMinHeap.h"
-#include "uncopyable.h"
-#include "timestamp.h"
+#include "../base/uncopyable.h"
+#include "../base/timestamp.h"
 #include "Callbacks.h"
 
 #include <set>

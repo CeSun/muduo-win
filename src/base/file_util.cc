@@ -4,8 +4,8 @@
 
 #define NOMINMAX
 
-#include <file_util.h>
-#include <logging.h>
+#include "file_util.h"
+#include "logging.h"
 
 #include <algorithm>
 #include <errno.h>
@@ -46,7 +46,9 @@ void FileUtil::AppendFile::append(const char* logline, const size_t len)
 			int err = ferror(fp_);
 			if (err)
 			{
-				fprintf(stderr, "AppendFile::append() failed %s\n", strerror(err));
+				char text[128];
+				strerror_s(text, sizeof(text), err);
+				fprintf(stderr, "AppendFile::append() failed %s\n", text);
 			}
 			break;
 		}

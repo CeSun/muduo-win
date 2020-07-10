@@ -13,9 +13,9 @@
 #define CALM_NET_EVENTLOOP_H_
 
 #include "SocketsOps.h"
-#include "timestamp.h"
-#include "thread.h"
-#include "uncopyable.h"
+#include "../base/timestamp.h"
+#include "../base/thread.h"
+#include "../base/uncopyable.h"
 #include "TimerId.h"
 #include "Callbacks.h"
 

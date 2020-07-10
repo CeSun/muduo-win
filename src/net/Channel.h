@@ -1,8 +1,8 @@
 #ifndef CALM_NET_CHANNEL_H_
 #define CALM_NET_CHANNEL_H_
 
-#include <uncopyable.h>
-#include <timestamp.h>
+#include "../base/uncopyable.h"
+#include "../base/timestamp.h"
 
 #include <functional>
 #include <memory>

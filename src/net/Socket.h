@@ -1,6 +1,6 @@
 #ifndef CALM_NET_SOCKET_H_
 #define CALM_NET_SOCKET_H_
-#include "uncopyable.h"
+#include "../base/uncopyable.h"
 namespace calm
 {
 	namespace net

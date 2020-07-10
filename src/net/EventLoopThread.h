@@ -6,8 +6,8 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_EVENTLOOPTHREAD_H_
 #define CALM_NET_EVENTLOOPTHREAD_H_
-#include "uncopyable.h"
-#include "types.h"
+#include "../base/uncopyable.h"
+#include "../base/types.h"
 #include <condition_variable>
 #include <mutex>
 #include <thread>

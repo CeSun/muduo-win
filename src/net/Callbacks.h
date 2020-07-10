@@ -9,7 +9,7 @@
 #define CALM_NET_CALLBACKS_H_
 #include <functional>
 #include <memory>
-#include "timestamp.h"
+#include "../base/timestamp.h"
 
 namespace calm
 {

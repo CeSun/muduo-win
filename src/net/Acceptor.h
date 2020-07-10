@@ -9,7 +9,7 @@
 #define CALM_NET_ACCEPTOR_H_
 
 #include <functional>
-#include "uncopyable.h"
+#include "../base/uncopyable.h"
 
 
 #include "Channel.h"

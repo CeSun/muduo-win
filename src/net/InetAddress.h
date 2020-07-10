@@ -1,7 +1,7 @@
 #ifndef CALM_NET_INETADDRESS_H_
 #define CALM_NET_INETADDRESS_H_
-#include "copyable.h"
-#include "stringpiece.h"
+#include "../base/copyable.h"
+#include "../base/stringpiece.h"
 #include "SocketsOps.h"
 
 namespace calm

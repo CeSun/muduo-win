@@ -7,7 +7,7 @@
 #include "Connector.h"
 #include "EventLoop.h"
 #include "Channel.h"
-#include "logging.h"
+#include "../base/logging.h"
 
 using namespace calm;
 using namespace calm::net;
@@ -146,8 +146,10 @@ void Connector::handleWrite()
 		int err = sockets::getSocketError(sockfd);
 		if (err)
 		{
+			char text[128];
+			strerror_s(text, sizeof(text), err);
 			LOG_WARN << "Connector::handleWrite - SO_ERROR = "
-				<< err << " " << strerror(err);
+				<< err << " " << text;
 			retry(sockfd);
 		}
 		else if (sockets::isSelfConnect(sockfd))
@@ -182,7 +184,9 @@ void Connector::handleError()
 	{
 		int sockfd = removeAndResetChannel();
 		int err = sockets::getSocketError(sockfd);
-		LOG_TRACE << "SO_ERROR = " << err << " " << strerror(err);
+		char text[128];
+		strerror_s(text, sizeof(text), err);
+		LOG_TRACE << "SO_ERROR = " << err << " " << text;
 		retry(sockfd);
 	}
 }

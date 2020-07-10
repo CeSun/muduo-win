@@ -21,30 +21,30 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{961FFF5D-D860-498B-996F-62C83B09B483}</ProjectGuid>
     <RootNamespace>calm</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -70,10 +70,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)..\..\alds;$(SolutionDir)..\..\net;$(SolutionDir)..\..\base;$(SolutionDir)..\..\3rdParty\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\..\..\build\lib\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)..\..\3rdParty\include;$(SolutionDir)..\..\base;$(SolutionDir)..\..\net;$(SolutionDir)..\..\alds;$(IncludePath)</IncludePath>
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\..\..\build\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\..\..\build\lib\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\..\..\build\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -92,6 +100,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,6 +126,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -155,26 +165,6 @@
     <ClCompile Include="..\..\..\net\TcpServer.cc" />
     <ClCompile Include="..\..\..\net\Timer.cc" />
     <ClCompile Include="..\..\..\net\TimerQueue.cc" />
-    <ClCompile Include="..\..\..\test\acceptor_test.cc" />
-    <ClCompile Include="..\..\..\test\async_logging_test.cc" />
-    <ClCompile Include="..\..\..\test\config_file_read_test.cc" />
-    <ClCompile Include="..\..\..\test\connector_test.cc" />
-    <ClCompile Include="..\..\..\test\echoserver_test.cc" />
-    <ClCompile Include="..\..\..\test\eventloopthreadpool_test.cc" />
-    <ClCompile Include="..\..\..\test\eventloopthread_test.cc" />
-    <ClCompile Include="..\..\..\test\logging_test.cc" />
-    <ClCompile Include="..\..\..\test\log_file_test.cc" />
-    <ClCompile Include="..\..\..\test\log_stream_bench.cc" />
-    <ClCompile Include="..\..\..\test\eventloop_test.cc" />
-    <ClCompile Include="..\..\..\test\security_test.cc" />
-    <ClCompile Include="..\..\..\test\min_heap_test.cc" />
-    <ClCompile Include="..\..\..\test\protobuf\Person.pb.cc" />
-    <ClCompile Include="..\..\..\test\protobuf\testprotobuf.cc" />
-    <ClCompile Include="..\..\..\test\socketsOps_test.cc" />
-    <ClCompile Include="..\..\..\test\tcpclient_test.cc" />
-    <ClCompile Include="..\..\..\test\ThreadPool_test.cc" />
-    <ClCompile Include="..\..\..\test\timerqueue_test.cc" />
-    <ClCompile Include="..\..\..\test\time_min_heap_test.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\alds\min_heap.h" />
@@ -220,7 +210,6 @@
     <ClInclude Include="..\..\..\net\Timer.h" />
     <ClInclude Include="..\..\..\net\TimerId.h" />
     <ClInclude Include="..\..\..\net\TimerQueue.h" />
-    <ClInclude Include="..\..\..\test\protobuf\Person.pb.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

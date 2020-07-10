@@ -11,12 +11,12 @@
 #include "SocketsOps.h"
 #include "EventLoopThreadPool.h"
 #include "EventLoop.h"
-#include "logging.h"
+#include "../base/logging.h"
 #include "Acceptor.h"
 #include "TcpConnection.h"
 
-#include "uncopyable.h"
-#include "types.h"
+#include "../base/uncopyable.h"
+#include "../base/types.h"
 
 #include <map>
 #include <memory>

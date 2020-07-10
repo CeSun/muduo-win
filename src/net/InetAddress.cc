@@ -1,5 +1,5 @@
 #include "InetAddress.h"
-#include "logging.h"
+#include "../base/logging.h"
 #include "Endian.h"
 
 //#include "types.h"

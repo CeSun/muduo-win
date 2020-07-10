@@ -1,7 +1,7 @@
 #ifndef CALM_BASE_CONFIGFILEREADER_H_
 #define CALM_BASE_CONFIGFILEREADER_H_
 
-#include <uncopyable.h>
+#include "uncopyable.h"
 
 #include <map>
 #include <string>

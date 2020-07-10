@@ -1,8 +1,8 @@
 #ifndef CALM_BASE_LOGGING_H_
 #define CALM_BASE_LOGGING_H_
 
-#include <log_stream.h>
-#include <timestamp.h>
+#include "log_stream.h"
+#include "timestamp.h"
 
 #ifdef _MSC_VER
 #define  WIN32_LEAN_AND_MEAN

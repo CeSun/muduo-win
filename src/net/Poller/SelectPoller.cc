@@ -1,7 +1,7 @@
 #include "SelectPoller.h"
-#include "logging.h"
-#include "types.h"
-#include "Channel.h"
+#include "../../base/logging.h"
+#include "../../base/types.h"
+#include "../Channel.h"
 
 #include <assert.h>
 #include <errno.h>

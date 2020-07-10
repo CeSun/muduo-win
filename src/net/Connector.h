@@ -7,7 +7,7 @@
 #ifndef CALM_NET_CONNECTOR_H_
 #define CALM_NET_CONNECTOR_H_
 #include "InetAddress.h"
-#include "uncopyable.h"
+#include "../base/uncopyable.h"
 
 #include <memory>
 #include <functional>

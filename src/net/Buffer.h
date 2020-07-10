@@ -9,9 +9,9 @@
 #define CALM_NET_BUFFER_H_
 //
 #pragma warning(disable : 4996)
-#include "copyable.h"
-#include "stringpiece.h"
-#include "types.h"
+#include "../base/copyable.h"
+#include "../base/stringpiece.h"
+#include "../base/types.h"
 
 #include <vector>
 //#include <assert.h>

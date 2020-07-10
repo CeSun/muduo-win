@@ -1,8 +1,8 @@
 #ifndef CALM_BASE_TIMESTAMP_H_
 #define CALM_BASE_TIMESTAMP_H_
 
-#include <copyable.h>
-#include <types.h>
+#include "copyable.h"
+#include "types.h"
 
 
 namespace calm

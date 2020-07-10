@@ -6,8 +6,8 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_EVENTLOOPTHREADPOOL_H_
 #define CALM_NET_EVENTLOOPTHREADPOOL_H_
-#include "types.h"
-#include "uncopyable.h"
+#include "../base/types.h"
+#include "../base/uncopyable.h"
 #include <functional>
 #include <vector>
 #include <memory>

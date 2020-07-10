@@ -1,7 +1,7 @@
 #ifndef CALM_BASE_BOUNDEDBLOCKINGQUEUE_H_
 #define CALM_BASE_BOUNDEDBLOCKINGQUEUE_H_
 
-#include <uncopyable.h>
+#include "uncopyable.h"
 
 #include <deque>
 #include <mutex>

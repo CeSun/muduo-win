@@ -1,6 +1,6 @@
-#include <logging.h>
-#include <timestamp.h>
-#include <thread.h>
+#include "logging.h"
+#include "timestamp.h"
+#include "thread.h"
 
 #include <thread> //thread_local
 #include <assert.h>
@@ -110,8 +110,11 @@ Logger::Impl::Impl(LogLevel level, int savedErrno, const Logger::SourceFile& fil
 	stream_ << T(LogLevelName[level], 6);
 	if(savedErrno != 0)
 	{
+
+		char text[128];
+		strerror_s(text, sizeof(text), savedErrno);
 		//FIXME: for windows GetLastErr() can not get the error message
-		stream_ << strerror(savedErrno) << " (errno=" << savedErrno << ") ";
+		stream_ << text << " (errno=" << savedErrno << ") ";
 	}
 }
 

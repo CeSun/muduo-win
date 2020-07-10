@@ -212,7 +212,8 @@ void MD5_Calculate (const char* pContent, unsigned int nLen,char* md5)
     MD5_Final(&context,buff);
     for(i=0;i<16;i++)
     {
-        sprintf(md5++,"%x",(buff[i] & 0xF0)>>4);
-        sprintf(md5++,"%x",buff[i] & 0x0F);
+        sprintf_s(md5 + 1, sizeof(md5 + 1),"%x",(buff[i] & 0xF0)>>4);
+        sprintf_s(md5 + 2, sizeof(md5 + 2), "%x",buff[i] & 0x0F);
+        md5 += 2;
     }
 }

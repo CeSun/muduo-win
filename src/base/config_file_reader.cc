@@ -1,5 +1,5 @@
-#include <config_file_reader.h>
-#include <types.h>
+#include "config_file_reader.h"
+#include "types.h"
 
 //#include <cstdio>
 
@@ -52,7 +52,8 @@ void ConfigFileReader::_LoadFile(const char* filename)
 {
 	m_config_file.clear();
 	m_config_file.append(filename);
-	FILE* fp = fopen(filename, "r");
+	FILE* fp = nullptr;
+	fopen_s(&fp, filename, "r");
 	if (!fp)
 	{
 		//log("can not open %s,errno = %d", filename, errno);
@@ -89,11 +90,11 @@ int ConfigFileReader::_WriteFile(const char* filename)
 	FILE* fp = NULL;
 	if (filename == NULL)
 	{
-		fp = fopen(m_config_file.c_str(), "w");
+		fopen_s(&fp, m_config_file.c_str(), "w");
 	}
 	else
 	{
-		fp = fopen(filename, "w");
+		fopen_s(&fp, filename, "w");
 	}
 	if (fp == NULL)
 	{

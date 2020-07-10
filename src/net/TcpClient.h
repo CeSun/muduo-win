@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_TCPCLIENT_H_
 #define CALM_NET_TCPCLIENT_H_
-#include "uncopyable.h"
+#include "../base/uncopyable.h"
 #include "TcpConnection.h"
 
 #include <mutex>

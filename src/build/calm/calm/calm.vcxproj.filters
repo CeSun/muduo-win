@@ -7,17 +7,11 @@
     <Filter Include="net">
       <UniqueIdentifier>{f30c5bb4-3d1b-4368-9ae3-63e4a3953c1f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="test">
-      <UniqueIdentifier>{acc06beb-b79c-4b83-b6b1-5fe24438403e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="net\Poller">
       <UniqueIdentifier>{b4b2ba96-85b9-4c55-ac38-d0cf32a92fa5}</UniqueIdentifier>
     </Filter>
     <Filter Include="alds">
       <UniqueIdentifier>{f93c0c9c-6fc3-415c-8949-729791542fbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="test\protobuf">
-      <UniqueIdentifier>{dea90e9d-24ef-49e7-9f83-380532d97375}</UniqueIdentifier>
     </Filter>
     <Filter Include="base\security">
       <UniqueIdentifier>{676ad783-37de-4ad2-866c-6a5cd0e9f8af}</UniqueIdentifier>
@@ -54,29 +48,8 @@
     <ClCompile Include="..\..\..\base\win_time.cc">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\test\async_logging_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\config_file_read_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\log_file_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\log_stream_bench.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\logging_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\ThreadPool_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\net\SocketsOps.cc">
       <Filter>net</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\socketsOps_test.cc">
-      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\net\InetAddress.cc">
       <Filter>net</Filter>
@@ -105,12 +78,6 @@
     <ClCompile Include="..\..\..\net\Acceptor.cc">
       <Filter>net</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\test\eventloop_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\acceptor_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\net\TcpConnection.cc">
       <Filter>net</Filter>
     </ClCompile>
@@ -123,47 +90,17 @@
     <ClCompile Include="..\..\..\net\EventLoopThread.cc">
       <Filter>net</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\test\eventloopthread_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\eventloopthreadpool_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\echoserver_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\net\Connector.cc">
       <Filter>net</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\test\connector_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\net\TcpClient.cc">
       <Filter>net</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\tcpclient_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\time_min_heap_test.cc">
-      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\net\Timer.cc">
       <Filter>net</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\net\TimerQueue.cc">
       <Filter>net</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\min_heap_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\timerqueue_test.cc">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\protobuf\Person.pb.cc">
-      <Filter>test\protobuf</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\protobuf\testprotobuf.cc">
-      <Filter>test\protobuf</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\base\security\aes_core.cpp">
       <Filter>base\security</Filter>
@@ -173,9 +110,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\base\security\md5.cpp">
       <Filter>base\security</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\test\security_test.cc">
-      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -295,9 +229,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\alds\min_heap.h">
       <Filter>alds</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\test\protobuf\Person.pb.h">
-      <Filter>test\protobuf</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\base\security\aes.h">
       <Filter>base\security</Filter>

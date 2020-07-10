@@ -6,8 +6,8 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_TIMER_H_
 #define CALM_NET_TIMER_H_
-#include "uncopyable.h"
-#include "timestamp.h"
+#include "../base/uncopyable.h"
+#include "../base/timestamp.h"
 #include "Callbacks.h"
 
 #include <atomic>

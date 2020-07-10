@@ -1,4 +1,13 @@
+# calm: muduo for win
+
+原本的muduo-win头文件引用混乱，vcxproj的项目配置也有一些问题，不能直接编译，我稍微修改了一下，可以直接使用vs2017进行编译了。
+
+库具体没有测试，正在学习中。
+
+以下是源readme。
+
 # calm
+
 excerpts from muduo:https://github.com/chenshuo/muduo
 Change it to windows,use C++11.
 ## How to use

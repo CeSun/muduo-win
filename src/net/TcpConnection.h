@@ -7,9 +7,9 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_TCPCONNECTION_H_
 #define CALM_NET_TCPCONNECTION_H_
-#include "uncopyable.h"
-#include "stringpiece.h"
-#include "types.h"
+#include "../base/uncopyable.h"
+#include "../base/stringpiece.h"
+#include "../base/types.h"
 #include "InetAddress.h"
 #include "Callbacks.h"
 #include "Buffer.h"

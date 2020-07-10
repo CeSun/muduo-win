@@ -6,8 +6,9 @@
 //////////////////////////////////////////////////////////////////////////
 #ifndef CALM_NET_TIMERID_H_
 #define CALM_NET_TIMERID_H_
-#include "copyable.h"
-#include "types.h"
+#include "../base/copyable.h"
+#include "../base/types.h"
+
 namespace calm
 {
 	namespace net
